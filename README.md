@@ -15,6 +15,8 @@ This version of web app shows below information regarding COVID19 in India:
 10. In each lockdown phase top 10 states based on the cases found.
 
 The front UI looks like this:
+
+
 ![alt text](https://github.com/joyabhishek/covid19FlaskWebApp/blob/master/UI%20Design/iPhone%20X-XS-11%20Pro%20%E2%80%93%201.jpg "UI Design for this webApp can be found in tree/master/UI%20Design")
 
 To setup the web app locally
