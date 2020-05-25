@@ -1,7 +1,8 @@
 # covid19FlaskWebApp
 
-Version: Beta 1.0
-This version of web app shows below information regarding COVID19 in India:
+##### Version: Beta 1.0
+
+##### This version of web app shows below information regarding COVID19 in India:
 
 1. Total no of effected cases till now.
 2. Realtime count of people getting effected each day.
@@ -14,12 +15,12 @@ This version of web app shows below information regarding COVID19 in India:
 9. Doubling rate, recovery rate, Mortality rate in each lockdown phase.
 10. In each lockdown phase top 10 states based on the cases found.
 
-The front UI looks like this:
+##### The front UI looks like this:
 
 
 ![alt text](https://github.com/joyabhishek/covid19FlaskWebApp/blob/master/UI%20Design/iPhone%20X-XS-11%20Pro%20%E2%80%93%201.jpg "UI Design for this webApp can be found in tree/master/UI%20Design")
 
-To setup the web app locally
+###### To setup the web app locally
 
 1. Pull the code: 
 `Git clone "https://github.com/joyabhishek/covid19FlaskWebApp.git"`
