@@ -1,0 +1,26 @@
+{% extends "layout.html" %}
+
+{% block belowNavBlock %}
+        <div>
+            <div class="row no-gutters justify-content-center">                
+                <div class="col-10 EffectedBoxStyle mx-2" style="text-align: justify;  text-justify: inter-word;" >
+                    <p class="px-2 pt-2">THANKS to <a href="https://www.covid19india.org/" id="covid19india-link">https://www.covid19india.org/</a> for providing the data and inspiration behind this website. Please check that out
+                    </p>
+                </div>
+            </div>
+        </div> 
+        <div class="container py-2"></div>        
+        <div>
+            <div class="row no-gutters justify-content-center">                
+                <div class="col-10 DecreasedBoxStyle ">
+                    <a href="https://github.com/joyabhishek/covid19FlaskWebApp">
+                        <div class="row no-gutters">
+                            <div class="col-2 p-2"><img src="{{ url_for('static',filename='/images/github-mark.png') }}" style="height: 35px; width: 50px;"></div>
+                            <div class="col-10 p-1" id="github-text">The code for this web page is 
+    open sourced on Github</div>
+                        </div>
+                    </a>
+                </div>
+            </div>
+        </div> 
+{% endblock %}

@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="19" height="20" viewBox="0 0 19 20">
+  <g id="InfoIcon" transform="translate(-319 -17)">
+    <g id="Ellipse_1" data-name="Ellipse 1" transform="translate(319 18)" fill="#fff" stroke="#707070" stroke-width="2">
+      <circle cx="9.5" cy="9.5" r="9.5" stroke="none"/>
+      <circle cx="9.5" cy="9.5" r="8.5" fill="none"/>
+    </g>
+    <text id="i" transform="translate(327 33)" fill="rgba(0,0,0,0.58)" font-size="15" font-family="SegoeUI-Bold, Segoe UI" font-weight="700"><tspan x="0" y="0">i</tspan></text>
+  </g>
+</svg>

@@ -1,0 +1,132 @@
+{% extends "layout.html" %}
+
+{% block bokehBlock %}
+        <link href="http://cdn.pydata.org/bokeh/dev/bokeh-0.13.0.min.css" rel="stylesheet" type="text/css">
+        <link href="http://cdn.pydata.org/bokeh/dev/bokeh-widgets-0.13.0.min.css" rel="stylesheet" type="text/css">
+        <script src="https://cdn.bokeh.org/bokeh/release/bokeh-2.0.1.min.js"></script>
+        <script src="https://cdn.bokeh.org/bokeh/release/bokeh-widgets-2.0.1.min.js"></script>
+        <script src="https://cdn.bokeh.org/bokeh/release/bokeh-tables-2.0.1.min.js"></script> 
+        {{ plotInfo.script|safe }}
+{% endblock %}
+
+{% block belowNavBlock %}
+        <div>
+            <div class="row no-gutters justify-content-center EARDRow">    
+                {% for info in tdEARD %}            
+                <div class="col-2 {{ info.state }}BoxStyle mx-2">
+                    <div class="row my-2">
+                        <div class="col thick" align="center">{{ info.state }}</div>
+                    </div>
+                    <div class="row my-2">
+                        <div class="col" align="center">{{ info.total }}</div>
+                    </div>
+                    {% if info.delta is not none %}
+                    <div class="row my-2">
+                        <div class="col" align="center">
+                            {{ info.delta }}
+                            <span>
+                                <img src="{{ url_for('static',filename='images/{}Arrow.svg'.format(info.state)) }}"></span>
+                        </div>
+                        
+                    </div>
+                    {% endif %}
+                </div>
+                {% endfor %}
+            </div>            
+        </div>
+        <div class="container py-2"></div>
+        <div>
+            <div class="row dropdown show no-gutters justify-content-center ">
+                <div class="col-10 down-shadow py-2" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" align="center">
+                <span class="dropdownText">Lockdown </span>
+                <img src="{{ url_for('static',filename='/images/DropDownPolygon.svg') }}">
+                </div>
+                <div class="dropdown-menu col-12" aria-labelledby="dropdownMenuLink">
+                    <a class="dropdown-item" href="all">All</a>
+                    <div class="dropdown-divider"></div>
+                    <a class="dropdown-item" href="l1">Lockdown 1.0</a>
+                    <div class="dropdown-divider"></div>
+                    <a class="dropdown-item" href="l2">Lockdown 2.0</a>
+                    <div class="dropdown-divider"></div>
+                    <a class="dropdown-item" href="l3">Lockdown 3.0</a>
+                    <div class="dropdown-divider"></div>
+                    <a class="dropdown-item" href="l4">Lockdown 4.0</a>
+                </div>     
+            </div>
+        </div>
+        <div class="container py-2"></div>
+        <div>
+            <div class="row">
+                <div class="col-1"></div>
+                <div class="col-5" align="right">
+                    <b>From: </b>{{ lockdownDateInfo.lockdownStartDate }}
+                </div>
+                <div class="col-5" align="right">
+                    <b>To: </b>{{ lockdownDateInfo.lockdownEndDate }}
+                </div>
+                <div class="col-1"></div>
+            </div>
+        </div>
+        <div class="container py-2"></div>
+        <div class="row justify-content-center">
+            <div class="col-10">
+                {{ plotInfo.div|safe }}
+            </div>
+        </div>
+        <div class="container py-2"></div>        
+        <div>
+            <div class="row no-gutters justify-content-center">
+                {% for rateInfo in ratesInfoList %}               
+                <div class="col-3 {{ rateInfo.rateType }}RateBoxStyle mx-2">
+                    <div class="row my-2">
+                        <div class="col thick" align="center">{{ rateInfo.rateType }}</div>
+                    </div>
+                    <div class="row my-2">
+                        <div class="col thick" align="center">Rate</div>
+                    </div>
+                    <div class="row my-2">
+                    {% if rateInfo.rateType == 'Doubling'%}
+                        {% if rateInfo.rateValue == None %}                    
+                        <div class="col" align="center">Not yet doubled</div>
+                        {% else %}
+                        <div class="col" align="center">{{ '%02d' % rateInfo.rateValue }} Days</div>
+                        {% endif %}
+                    {% else %}
+                        <div class="col" align="center">{{ '%05.2f' % rateInfo.rateValue }} %</div>
+                    {% endif %}
+                    </div>
+                </div>
+                {% endfor %}
+            </div>            
+        </div>
+        <div class="container py-2"></div>
+        <div>
+            <div class="row dropdown show no-gutters justify-content-center ">
+                <div class="col-10 down-shadow py-2" align="center">
+                    <span class="worstHitStateTitle">Worst hit 10 states </span>
+                </div>
+            </div>
+        </div>
+        <div>
+            <div class="row justify-content-center">
+                <div class="col-10">
+                    <table class="table table-striped">
+                      <thead>
+                        <tr>
+                          <th scope="col" class="text-blue">States</th>
+                          <th scope="col" class="text-red">Confirmed cases count</th>
+                        </tr>
+                      </thead>
+                      <tbody>
+                        {% for stateInfo in stateInfoList %}
+                        <tr>
+                          <td class="text-blue">{{stateInfo.stateName}}</td>
+                          <td class="text-red">{{stateInfo.confirmedcasesNumber}}</td>
+                        </tr>
+                        {% endfor %}
+                      </tbody>
+                    </table>                    
+                </div>
+            </div>
+        </div>
+{% endblock %}

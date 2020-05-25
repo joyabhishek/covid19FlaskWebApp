@@ -1,0 +1,102 @@
+$red: #FB8989;
+
+$blue: #78B9FC;
+
+$green: #90BE6D;
+
+$gray: #6E6C6C;
+
+@mixin boxStyle($col) {
+  //box-shadow: 1px 1px 3px #d9d9d9;
+  box-shadow: 1px 1px 3px $col;
+  border: 1px solid $col;
+  border-radius: 2px;
+  color: $col;
+}
+
+@mixin thick {
+    font-weight: bold;
+    font-size: 0.8em;     
+}
+
+.EffectedBoxStyle{
+    @include boxStyle($red)
+}
+
+.ActiveBoxStyle{
+    @include boxStyle($blue)
+}
+
+.RecoveredBoxStyle{
+    @include boxStyle($green)
+}
+
+.DecreasedBoxStyle{
+    @include boxStyle($gray)
+}
+
+.EffectedBoxStyle,.ActiveBoxStyle, .RecoveredBoxStyle, .DecreasedBoxStyle{
+    .thick{
+     @include thick; 
+    }
+}
+
+.DoublingRateBoxStyle{
+    @include boxStyle($red)
+}
+
+.RecoveryRateBoxStyle{
+    @include boxStyle($green)
+}
+
+.MortalityRateBoxStyle{
+    @include boxStyle($gray)
+}
+
+.DoublingRateBoxStyle, .RecoveryRateBoxStyle, .MortalityRateBoxStyle{
+    .thick{
+     @include thick; 
+    }    
+}
+
+body {
+  font-size: 100%;
+}
+
+.dropdownText {
+    font-size: 1.2em;
+    font-weight: bold;
+    color: $gray;
+}
+
+.worstHitStateTitle {
+    font-weight: bold; 
+    color: $gray;
+}
+
+.table{
+    text-align:center;
+}
+
+.text-blue{
+    color: $blue;
+}
+
+.text-red{
+    color: $red;
+}
+
+.down-shadow {
+box-shadow: 0px 3px 3px #d9d9d9;
+}
+
+#github-text{
+  text-align: justify;  
+  text-justify: inter-word; 
+  color: $gray;
+}
+
+#covid19india-link{
+  color: $red;
+  text-decoration: underline;
+}

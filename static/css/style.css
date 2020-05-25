@@ -1,0 +1,84 @@
+.EffectedBoxStyle {
+  box-shadow: 1px 1px 3px #FB8989;
+  border: 1px solid #FB8989;
+  border-radius: 2px;
+  color: #FB8989; }
+
+.ActiveBoxStyle {
+  box-shadow: 1px 1px 3px #78B9FC;
+  border: 1px solid #78B9FC;
+  border-radius: 2px;
+  color: #78B9FC; }
+
+.RecoveredBoxStyle {
+  box-shadow: 1px 1px 3px #90BE6D;
+  border: 1px solid #90BE6D;
+  border-radius: 2px;
+  color: #90BE6D; }
+
+.DecreasedBoxStyle {
+  box-shadow: 1px 1px 3px #6E6C6C;
+  border: 1px solid #6E6C6C;
+  border-radius: 2px;
+  color: #6E6C6C; }
+
+.EffectedBoxStyle .thick, .ActiveBoxStyle .thick, .RecoveredBoxStyle .thick, .DecreasedBoxStyle .thick {
+  font-weight: bold;
+  font-size: 0.8em; }
+
+.DoublingRateBoxStyle {
+  box-shadow: 1px 1px 3px #FB8989;
+  border: 1px solid #FB8989;
+  border-radius: 2px;
+  color: #FB8989; }
+
+.RecoveryRateBoxStyle {
+  box-shadow: 1px 1px 3px #90BE6D;
+  border: 1px solid #90BE6D;
+  border-radius: 2px;
+  color: #90BE6D; }
+
+.MortalityRateBoxStyle {
+  box-shadow: 1px 1px 3px #6E6C6C;
+  border: 1px solid #6E6C6C;
+  border-radius: 2px;
+  color: #6E6C6C; }
+
+.DoublingRateBoxStyle .thick, .RecoveryRateBoxStyle .thick, .MortalityRateBoxStyle .thick {
+  font-weight: bold;
+  font-size: 0.8em; }
+
+body {
+  font-size: 100%; }
+
+.dropdownText {
+  font-size: 1.2em;
+  font-weight: bold;
+  color: #6E6C6C; }
+
+.worstHitStateTitle {
+  font-weight: bold;
+  color: #6E6C6C; }
+
+.table {
+  text-align: center; }
+
+.text-blue {
+  color: #78B9FC; }
+
+.text-red {
+  color: #FB8989; }
+
+.down-shadow {
+  box-shadow: 0px 3px 3px #d9d9d9; }
+
+#github-text {
+  text-align: justify;
+  text-justify: inter-word;
+  color: #6E6C6C; }
+
+#covid19india-link {
+  color: #FB8989;
+  text-decoration: underline; }
+
+/*# sourceMappingURL=style.css.map */
