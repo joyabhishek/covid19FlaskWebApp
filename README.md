@@ -33,3 +33,5 @@
 
 4. Run the flask app
 `flask run`
+
+#### A big shoutout to ###### https://www.covid19india.org/ ###### for inspiration and the data behind this web site. 
