@@ -15,8 +15,18 @@ This version of web app shows below information regarding COVID19 in India:
 10. In each lockdown phase top 10 states based on the cases found.
 
 The front UI looks like this:
-
-Inline-style: 
 ![alt text](https://github.com/joyabhishek/covid19FlaskWebApp/blob/master/UI%20Design/iPhone%20X-XS-11%20Pro%20%E2%80%93%201.jpg "UI Design for this webApp can be found in tree/master/UI%20Design")
 
+To setup the web app locally
 
+1. Pull the code: 
+`Git clone "https://github.com/joyabhishek/covid19FlaskWebApp.git"`
+
+2. Activate the environment:
+`covid19DjangoEnv\Scripts\activate.bat`
+
+3. Set flask app
+`SET FLASK_APP=index1.py`
+
+4. Run the flask app
+`flask run`
